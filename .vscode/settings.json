@@ -1,5 +1,22 @@
 {
-    "eslint.workingDirectories": [
-      "./frontend"
-    ]
+  "eslint.workingDirectories": ["./frontend"],
+  "eslint.format.enable": true,
+  "eslint.useFlatConfig": true,
+  "eslint.probe": [
+    "astro",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "mdx",
+    "vue",
+    "markdown",
+    "json",
+    "jsonc",
+    "jsx"
+  ],
+  "prettier.eslintIntegration": true,
+  "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+  "notebook.defaultFormatter": "rvest.vs-code-prettier-eslint"
 }
