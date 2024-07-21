@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 163 62 181;
+  --primary-light: 178 96 192;
+  --primary-dark: 148 28 170;
+  --background-light: 255 255 255;
+  --background-dark: 12 10 14;
+  --gray-50: 247 244 248;
+  --gray-100: 242 239 243;
+  --gray-200: 227 224 228;
+  --gray-300: 211 207 211;
+  --gray-400: 163 160 164;
+  --gray-500: 116 113 117;
+  --gray-600: 84 81 85;
+  --gray-700: 67 64 68;
+  --gray-800: 42 39 42;
+  --gray-900: 27 24 28;
+  --gray-950: 15 12 15;
+}
