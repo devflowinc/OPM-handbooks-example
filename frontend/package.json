@@ -12,29 +12,31 @@
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.25.1"
+    "@headlessui/react": "^1.7.6",
+    "@heroicons/react": "^2.0.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@eslint/compat": "^1.1.1",
-    "@eslint/js": "^9.7.0",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.1",
-    "autoprefixer": "^10.4.19",
-    "eslint": "^9.7.0",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-react": "^7.35.0",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-react-refresh": "^0.4.7",
-    "eslint-plugin-readable-tailwind": "^1.5.2",
-    "globals": "^15.8.0",
-    "postcss": "^8.4.39",
-    "prettier": "3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.5",
-    "tailwindcss": "^3.4.6",
-    "vite": "^5.3.4"
+    "@eslint/compat": "^1.0.6",
+    "@eslint/js": "^8.39.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^3.1.0",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.39.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.3.2",
+    "eslint-plugin-readable-tailwind": "^1.0.0",
+    "globals": "^13.13.0",
+    "postcss": "^8.4.16",
+    "prettier": "2.8.7",
+    "prettier-plugin-tailwindcss": "^0.2.1",
+    "react-router-dom": "^6.25.1",
+    "tailwindcss": "^3.2.7",
+    "vite": "^4.0.0"
   }
 }

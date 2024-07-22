@@ -1,0 +1,5 @@
+-[] Design essential pages
+-[] Initialize the project
+-[] Initialize Tailwind and Setup ESlint
+-[] Create wireframe for file upload and searching files
+-[] Implement and improve the design

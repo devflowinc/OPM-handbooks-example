@@ -1,25 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App.jsx';
 import PageNotFound from './Pages/PageNotFound.jsx';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
+import UploadPage from './Pages/UploadPage.jsx';
 import './index.css';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    errorElement: <PageNotFound />
-  },
-  {
-    path: '/about',
-    element: <div>About</div>
-  }
-]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route path="upload" element={<UploadPage />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   </React.StrictMode>
 );
