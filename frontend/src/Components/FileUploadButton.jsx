@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
 FileUploadButton.propTypes = {
-    onFileSelect: PropTypes.func.isRequired,
+  onFileSelect: PropTypes.func.isRequired
 };
 
 export default function FileUploadButton({ onFileSelect }) {
@@ -20,7 +20,9 @@ export default function FileUploadButton({ onFileSelect }) {
       onFileSelect(file);
       setError(null);
     } else {
-      setError('Invalid file type. Only DOCX, PDF, HTML, and TXT files are allowed.');
+      setError(
+        'Invalid file type. Only DOCX, PDF, HTML, and TXT files are allowed.'
+      );
     }
   };
 
@@ -41,7 +43,9 @@ export default function FileUploadButton({ onFileSelect }) {
       onFileSelect(file);
       setError(null);
     } else {
-      setError('Invalid file type. Only DOCX, PDF, HTML, and TXT files are allowed.');
+      setError(
+        'Invalid file type. Only DOCX, PDF, HTML, and TXT files are allowed.'
+      );
     }
   };
 
@@ -49,18 +53,19 @@ export default function FileUploadButton({ onFileSelect }) {
     const allowedExtensions = [
       'application/pdf',
       'text/plain',
-      'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
       'text/html'
     ];
     return allowedExtensions.includes(file.type);
   };
 
   return (
-    <div className="flex items-center justify-center w-full">
+    <div className="flex items-center justify-center w-full flex-col gap-3 mt-3">
       <label
-        htmlFor="dropzone-file"
-        className={`flex flex-col items-center justify-center w-full h-64 border-2 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600 ${
-          isDragOver ? 'border-blue-500' : 'border-gray-300'
+        className={`flex flex-col items-center justify-center w-full h-64 border-2 border-dashed rounded-lg cursor-pointer ${
+          isDragOver
+            ? 'border-primary border-opacity-500 bg-primary bg-opacity-5'
+            : 'border-gray-300 bg-gray-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600'
         }`}
         onClick={handleButtonClick}
         onDragOver={handleDragOver}
@@ -84,14 +89,14 @@ export default function FileUploadButton({ onFileSelect }) {
             />
           </svg>
           <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
-            <span className="font-semibold">Click to upload</span> or drag and drop
+            <span className="font-semibold">Click to upload</span> or drag and
+            drop
           </p>
           <p className="text-xs text-gray-500 dark:text-gray-400">
             DOCX, PDF, HTML, TXT
           </p>
         </div>
         <input
-          id="dropzone-file"
           type="file"
           ref={fileInputRef}
           onChange={handleFileChange}
